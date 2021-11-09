@@ -4,6 +4,7 @@ import { Timeline, Events, UrlButton, ImageEvent } from "@merc/react-timeline";
 // projects
 import L_ReactToDoList from "../../assets/img/projects/React_ToDo_List.webp";
 import L_MernTipCalc from "../../assets/img/projects/mern_tip_calc.webp";
+import Video_app from "../../assets/img/projects/Video_app.webp"
 import L_GetGitHubInfo from "../../assets/img/projects/get_github_info.webp";
 import L_SmartBrain from "../../assets/img/projects/brain.webp";
 import L_RoboFriends from "../../assets/img/projects/Robofriends.webp";
@@ -23,8 +24,6 @@ import L_REDUX from "../../assets/img/skills/redux.svg";
 import L_HTML5 from "../../assets/img/skills/html-5.svg";
 import L_CSS3 from "../../assets/img/skills/css3.svg";
 import L_BOOTSTRAP4 from "../../assets/img/skills/bootstrap-4.svg";
-import L_DJANGO from "../../assets/img/skills/django.svg";
-import L_DIGITAL_OCEAN from "../../assets/img/skills/digital-ocean.svg";
 import L_GIT from "../../assets/img/skills/github-api.svg";
 import L_MATERIALUI from "../../assets/img/skills/material-ui-1.svg";
 import L_Java from "../../assets/img/skills/javascript.svg";
@@ -37,6 +36,131 @@ const TimeLine = () => {
       <h1 className="pt-3 text-center font-details-b pb-3">PROJECTS</h1>
       <Timeline>
         <Events>
+        <ImageEvent
+            date="FULL-STACK PROJECT"
+            className="text-center"
+            text="MERN-Video-Call"
+            src={Video_app}
+            alt="Video Call"
+          >
+            <div className="d-flex justify-content-between flex-column mt-1">
+              <div>
+                <Accordion>
+                  <Card>
+                    <Accordion.Toggle
+                      as={Card.Header}
+                      eventKey="0"
+                      className="p-2 text-center accordian-main"
+                    >
+                      PROJECT DETAILS
+                    </Accordion.Toggle>
+
+                    <Accordion.Collapse eventKey="0" className="text-left">
+                      <Card.Body>
+                        <strong>Description:</strong> This app Provides login
+                        Facility along with the Users Time Logged In can be exported to Excel Sheet 
+                        Along with End to End Video Calling The specific user in search Or sharing the 
+                        socket ID to the registered users
+                        <hr />
+                        <strong>Features:</strong>
+                        <ul className="list-styles pt-1">
+                          <li>Login to your Account </li>
+                          <li>Make a Video Call to a user in search</li>
+                          <li>
+                            Pass The socked Id To call anyone Logged IN
+                          </li>
+                          <li>Time Logs of Users Logged in With export as Excell Sheet</li>
+                        </ul>
+                        <hr />
+                        <strong>Tech used:</strong>
+                        <ul>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_REACT}
+                                alt="React"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              React
+                            </span>
+                            <span className="p-2">
+                              <Image
+                                src={L_POSTGRESQL}
+                                alt="React"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>
+                              Socket.Io & Peer.Js
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_NODE_JS}
+                                alt="Node.js"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              Node.js
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_EXPRESS}
+                                alt="Express"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              Express
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_MONGODB}
+                                alt="MongoDB"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              MongoDB
+                            </span>
+                          </li>
+                          <li>
+                            <span className="p-2">
+                              <Image
+                                src={L_MATERIALUI}
+                                alt="Material-UI"
+                                rounded
+                                className="image-style1 m-1"
+                              ></Image>{" "}
+                              Material-UI & Bootstrap
+                            </span>
+                          </li>
+                        </ul>
+                      </Card.Body>
+                    </Accordion.Collapse>
+                  </Card>
+                </Accordion>
+              </div>
+              <div className="d-flex justify-content-between flex-nowrap text-center">
+                <UrlButton
+                  href="https://takeleap.netlify.app/"
+                  target="_blank"
+                >
+                  SEE LIVE
+                </UrlButton>
+                <UrlButton
+                  href="https://github.com/danussh/video-frontend"
+                  target="_blank"
+                >
+                  SOURCE CODE
+                </UrlButton>
+              </div>
+            </div>
+          </ImageEvent>
+
           <ImageEvent
             date="FULL-STACK PROJECT"
             className="text-center"
@@ -67,7 +191,6 @@ const TimeLine = () => {
                           <li>Login to your Account </li>
                           <li>Add a product</li>
                           <li>
-                            {" "}
                             Backend features with Update and Delete of Products
                           </li>
                           <li>Styled with Material-UI</li>
